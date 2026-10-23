@@ -1,0 +1,60 @@
+{
+ "n": 11,
+ "size": 5529,
+ "how": "lns from affine_n11_5488 (coord)",
+ "digest": "165b577837b4d3de",
+ "independent_check": "dimension n = 11; 5529 lines, 5529 distinct points\nVALID CAP SET: 5529 points in F_3^11, no three on a line.",
+ "verified": true,
+ "sha256_of_file": "c015d369db57b9bb1aeacb2f60b4df54677d8cff7a0142d934231ab68ef3dbf9",
+ "when": "2026-10-22T14:57:24",
+ "extra": {
+  "stats": {
+   "n": 11,
+   "worker": 1,
+   "seed": "affine_n11_5488",
+   "start": 5488,
+   "current": 5529,
+   "best": 5529,
+   "steps": 168,
+   "by_kind": {
+    "affine": {
+     "steps": 21,
+     "free_max": 2134,
+     "optimal": 21
+    },
+    "affine2": {
+     "steps": 27,
+     "free_max": 624,
+     "optimal": 27
+    },
+    "coord": {
+     "steps": 41,
+     "free_max": 4807,
+     "optimal": 21
+    },
+    "coords2": {
+     "steps": 32,
+     "free_max": 730,
+     "optimal": 32
+    },
+    "random": {
+     "steps": 47,
+     "free_max": 1994,
+     "optimal": 47
+    }
+   },
+   "started": "2026-10-22T13:15:21",
+   "last": {
+    "kind": "coord",
+    "removed": 1837,
+    "free": 4807,
+    "before": 5527,
+    "after": 5529,
+    "status": "FEASIBLE",
+    "secs": 184.53,
+    "at": "2026-10-22T14:57:01"
+   },
+   "record_to_beat": 5488
+  }
+ }
+}

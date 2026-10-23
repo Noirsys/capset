@@ -1,0 +1,13 @@
+{
+  "dims": [7, 8, 9, 10, 11],
+  "machine": "xai3",
+  "shard": {"index": 0, "count": 2},
+  "remotes": [{"name": "xai4", "ssh": "tt@xai4", "path": "capset_project/v2"}],
+  "solver_workers": 3,
+  "threads_per_solve": 2,
+  "lns_workers": 4,
+  "lns_dims": [9, 11, 10, 12],
+  "max_orbits": {"7": 2500, "8": 2500, "9": 2500, "10": 1600, "11": 700},
+  "port": 8170,
+  "host": "0.0.0.0"
+}

@@ -1,0 +1,60 @@
+{
+ "n": 9,
+ "size": 1084,
+ "how": "lns from affine_n9_1082 (affine)",
+ "digest": "12d746361afb9eec",
+ "independent_check": "dimension n = 9; 1084 lines, 1084 distinct points\nVALID CAP SET: 1084 points in F_3^9, no three on a line.",
+ "verified": true,
+ "sha256_of_file": "8668467e43c6832d942ce11a3c6ba06427bf034be1395789ac73e087ce097f5f",
+ "when": "2026-10-22T15:19:47",
+ "extra": {
+  "stats": {
+   "n": 9,
+   "worker": 0,
+   "seed": "affine_n9_1082",
+   "start": 1082,
+   "current": 1084,
+   "best": 1084,
+   "steps": 37,
+   "by_kind": {
+    "coord": {
+     "steps": 5,
+     "free_max": 1702,
+     "optimal": 2
+    },
+    "affine": {
+     "steps": 11,
+     "free_max": 599,
+     "optimal": 10
+    },
+    "coords2": {
+     "steps": 8,
+     "free_max": 146,
+     "optimal": 8
+    },
+    "random": {
+     "steps": 9,
+     "free_max": 406,
+     "optimal": 9
+    },
+    "affine2": {
+     "steps": 4,
+     "free_max": 144,
+     "optimal": 4
+    }
+   },
+   "started": "2026-10-22T15:14:20",
+   "last": {
+    "kind": "affine",
+    "removed": 383,
+    "free": 414,
+    "before": 1083,
+    "after": 1084,
+    "status": "OPTIMAL",
+    "secs": 0.11,
+    "at": "2026-10-22T15:19:46"
+   },
+   "record_to_beat": 1082
+  }
+ }
+}
