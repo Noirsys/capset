@@ -1,5 +1,7 @@
 # Noirsys Pipeline — Third Form: the cap-set harness
 
+**Paper:** [paper/main.pdf](paper/main.pdf) · **Plain-English write-up:** [PUBLIC-WRITEUP.md](PUBLIC-WRITEUP.md) · **Repository:** [github.com/Noirsys/capset](https://github.com/Noirsys/capset)
+
 The verification doctrine that came out of a reflexive agent laboratory, and the
 cap-set search that was built to it. Includes both witnesses, both independent
 checkers, and the paper.

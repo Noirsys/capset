@@ -48,14 +48,19 @@ of \NumAttacksTotal{} cases while appearing in \NumTrajectoriesUsed{} of
 \NumTrajectoriesScanned{} production trajectories. Second, a
 demonstration that the resulting doctrine transfers out of the
 laboratory: a cap-set search harness built to that doctrine, containing
-no language model anywhere in its search path, established lower bounds
-$c(9,3) \ge \NumCapNine$ (previously \NumCapNinePrior) and
-$c(11,3) \ge \NumCapEleven$ (previously \NumCapElevenPrior), and---more
+no language model anywhere in its search path, established two lower
+bounds that do not appear in the prior literature---$c(9,3) \ge
+\NumCapNine$ (in a dimension for which no published affine value exists,
+against $\NumCapNinePrior$ in the projective table) and $c(11,3) \ge
+\NumCapEleven$ (against the published corollary $\NumCapElevenPrior$)---and---more
 instructively---caught in the act the exact failure mode the laboratory
 had characterised, when the harness announced a ``record'' that sat
-below the published bound. We are explicit about what this does and does
-not show: the mathematics does not depend on the laboratory, and the
-laboratory's contribution to it is a checking regime, not a result.
+below the published bound. The two bounds are verified by two checkers
+sharing no code, both witnesses ship with the paper, and the margins are
+weighted separately because their prior evidence is of different kinds.
+We are explicit about what this does and does not show: the mathematics
+does not depend on the laboratory, and the laboratory's contribution to
+it is a checking regime, not a result.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -99,8 +104,11 @@ subject's output. We show this with a controlled probe in which
 passed, and \NumShadowNewPass{} of \NumShadowN{} after a containment
 change.
 \item Two lower bounds for cap sets in $\mathbb{F}_3^9$ and
-$\mathbb{F}_3^{11}$, at \NumCapNine{} and \NumCapEleven{}, with
-byte-identified witnesses and two independent checkers.
+$\mathbb{F}_3^{11}$, at \NumCapNine{} and \NumCapEleven{}, neither of which
+appears in the prior literature: the $n=11$ value improves a numbered
+corollary, and the $n=9$ value occupies a dimension for which no published
+affine construction exists. Both ship with byte-identified witnesses and two
+independent checkers.
 \item A worked example of the doctrine transferring: the same harness
 later produced a false ``record'' by grading itself against a stale
 internal number, and the failure was caught by the regime the laboratory
@@ -293,6 +301,7 @@ $G$-invariant cap beats $X$.'' Every task in the second engine therefore
 terminates in a statement.
 
 \subsection{Verification}
+\label{sec:verify}
 
 Two checkers, sharing no code, agree on both witnesses. The project's own
 checker tests the property as a pair scan over a tuple set. The
@@ -310,6 +319,7 @@ interpreter with no virtual environment, so that a referee needs nothing
 installed.
 
 \section{The Failure Mode Reappears, and Is Caught}
+\label{sec:falserecord}
 
 The instructive result of this section is not the bounds. It is that the
 harness reproduced, outside the laboratory, the exact failure the
@@ -380,6 +390,74 @@ and cannot lower the upper one. The two marked points are the results
 reported here.}
 \label{fig:frontier}
 \end{figure}
+
+\subsection{Two lower bounds that were not in the literature}
+\label{sec:results-n9}
+
+Table~\ref{tab:frontier} states the frontier and Table~\ref{tab:claims}
+separates the two new entries from their priors. It is worth being precise
+about what ``new'' means in each case, because the
+two claims rest on different kinds of evidence and the paper's own doctrine
+requires that the difference be stated rather than averaged away.
+
+\paragraph{The $n=11$ bound is the substantive result.} The previous value,
+$\NumCapElevenPrior$, is a numbered corollary in a published paper
+\cite{karapetyan2023,karapetyan2024}. It is therefore a claim we can point at,
+attribute, and beat, and $\NumCapEleven$ beats it by $\NumCapElevenDelta$
+points. This is the ordinary form of a mathematical improvement: a citation
+out, a construction in, a larger number established by a verifier that shares
+no code with the search.
+
+\paragraph{The $n=9$ bound fills a hole in the literature.} There is no
+published $d=9$ value to beat. Edel's tables give the projective
+$\NumCapNinePrior$ in $\mathrm{PG}(8,3)$ and stop there
+\cite{edel2004}; the doubling that yields the affine value is the reader's to
+perform. The most active group in this niche publishes explicit corollaries
+for four dimensions and omits this one \cite{karapetyan2023}; the September
+2026 frontier table lists $d=10$ and $d=11$ and no $d=9$ row
+\cite{endlessexam2026}; and the sequence of exactly-known cap-set sizes
+\cite{oeis} terminates at $n=6$. To the best of our knowledge, and after
+searching each of those sources, $\NumCapNine$ is the first published
+construction at this dimension. We report that as what it is---a claim about
+the literature, not a claim about the mathematics---and note in
+Section~\ref{sec:limits} why it is the more fragile of the two.
+
+\subsection{Why the record was not lost to stale thresholds}
+
+A cap-set search has an unusual property that bears on the paper's argument:
+its output is not compared against a remembered standard, it is compared
+against the definition. A candidate set either contains three collinear
+points or it does not, and the two checkers of Section~\ref{sec:verify} decide
+that question without reference to any prior result. The literature
+comparison and the mathematical verification are therefore separate acts,
+performed by separate machinery, and only the first of them can inherit a
+stale constant.
+
+This is the structural reason the two halves of this paper belong together.
+The harness of Section~\ref{sec:falserecord} did inherit a stale constant and
+did announce a false record---but the false record was detectable without any
+human judgement about literature, because $5492$ is a valid cap and
+$\NumCapEleven$ is a larger one, both checkable by the same script. A regime
+that had only compared numbers would have shipped it. A regime that verified
+the artifact and separately verified the bar caught it. The fourth item of the
+specification is exactly this distinction: a comparison performed is not a
+number displayed beside a standard.
+
+\begin{table}[!t]
+\caption{What is new, and on what evidence. The two results are not of equal
+strength and are not presented as though they were.}
+\label{tab:claims}
+\centering
+\small
+\begin{tabular}{@{}p{0.9cm}p{1.6cm}p{1.9cm}p{2.6cm}@{}}
+\toprule
+$n$ & bound & prior value & basis of the prior \\
+\midrule
+9  & $\NumCapNine$   & $\NumCapNinePrior$   & absence of a published $d=9$ claim \\
+11 & $\NumCapEleven$ & $\NumCapElevenPrior$ & numbered corollary, \cite{karapetyan2023} \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Weighting the two margins}
 
@@ -478,6 +556,7 @@ report both because a verification regime that has never caught anything
 is indistinguishable from no regime at all.
 
 \section{Limitations}
+\label{sec:limits}
 
 The adversary in Section IV was instructed to attack. The null result on
 propensity therefore bounds what happened in this record, not what an
@@ -486,10 +565,13 @@ separate propensity from inability. The trajectory scan covers the
 trajectories retained on disk at scan time, and live trees rotate, so the
 count of \NumTrajectoriesScanned{} is a scan-time figure.
 
-The $n=9$ comparison rests on absence of a published claim, as stated.
-The two active groups in this niche are also the likely reviewers of any
-public claim, and the citation list in this paper should be read with
-that in mind.
+The $n=9$ comparison rests on absence of a published claim, as stated in
+Section~\ref{sec:results-n9}. That is a weaker footing than the $n=11$ comparison and we
+do not treat the two as interchangeable: the $n=11$ result would survive a
+competitor publishing a new construction, whereas the $n=9$ result would
+have to be re-compared against it. The two active groups in this niche are
+also the likely reviewers of any public claim, and the citation list in this
+paper should be read with that in mind.
 
 Both cap-set results were reached by descent from existing constructions.
 They are improvements of margin, not new construction families, and the
@@ -506,6 +588,16 @@ it. Its value was that it specified, by being attacked, what its own
 verifier must survive---and that specification, applied to a subject with
 no language model in it, produced both a checkable result and a
 demonstration that the checkable result was being computed honestly.
+
+The two bounds themselves are worth stating plainly, because they are the
+part of this work that a reader can settle without accepting any argument
+in it. $c(11,3) \ge \NumCapEleven$ improves a published corollary by
+$\NumCapElevenDelta$. $c(9,3) \ge \NumCapNine$ establishes a construction
+in a dimension that the standard references leave blank. Both are verified
+by two programs that share no code, both witnesses are shipped, and a
+referee with a bare \texttt{python3} and no network can confirm either
+claim in seconds. Whatever else is argued here, those two numbers are now
+in the record and can be built on.
 
 The laboratory's own framing is the right one to close on. A ledger of
 honest entries compounds; a ledger of claims does not.

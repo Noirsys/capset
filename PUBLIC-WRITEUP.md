@@ -80,6 +80,21 @@ Both verified by two separate checkers that share no code, one of them written
 with a deliberately different algorithm and needing nothing installed. Both
 witnesses stored byte-for-byte with fingerprints taken before and after.
 
+Neither number was in the literature. That's the part worth pausing on.
+
+At 11 dimensions the old record is a numbered corollary in a published paper —
+we can point at it and say we beat it by 25 points. At 9 dimensions there is
+*nothing to beat*. Edel's tables give the 1082 in the projective space at that
+size and simply stop; the doubling into the affine space is left to the reader.
+The group that's most active in this exact corner publishes corollaries for four
+dimensions and skips that one. The standard reference table lists 10 and 11 and
+no 9 at all. So 1084 isn't beating a number — it's filling a hole where nobody
+had written one down.
+
+That's a weaker kind of claim than beating a citation, and we're labelling it
+that way on purpose. But it's still two constructions that weren't there before,
+checkable in one command, with the files shipped.
+
 ## And then the machine did the exact thing we'd just written down
 
 The harness kept a "record to beat" number in its own code. That number was correct
@@ -125,5 +140,5 @@ A ledger of honest entries compounds. A ledger of claims does not.
 ---
 
 *Full paper, figures, both cap witnesses, both independent checkers and the
-reproducibility manifest: [repository link]. Everything runs on a laptop with
-nothing installed.*
+reproducibility manifest: [github.com/Noirsys/capset](https://github.com/Noirsys/capset).
+Everything runs on a laptop with nothing installed.*
