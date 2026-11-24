@@ -6,7 +6,18 @@ The verification doctrine that came out of a reflexive agent laboratory, and the
 cap-set search that was built to it. Includes both witnesses, both independent
 checkers, and the paper.
 
-**Headline results**
+> **Update, 2026-11-23.** Both bounds below were passed on 2026-11-14 by Matthew Holden
+> ([arXiv:2611.19543](https://arxiv.org/abs/2611.19543)): **1104** points in dimension 9 and
+> **5744** in dimension 11, with point lists at
+> [github.com/holdenmatt/capset-constructions](https://github.com/holdenmatt/capset-constructions).
+> Congratulations to him. We ran both of our checkers in `evidence/` on both of his lists, and all
+> four runs report a valid cap set (commands and output in
+> [`evidence/HOLDEN-2611.19543-CHECK.md`](evidence/HOLDEN-2611.19543-CHECK.md)).
+> So c(9,3) ≥ 1084 and c(11,3) ≥ 5529 still hold as lower bounds, but they are no longer the best
+> known. Our numbers were posted here on 2026-10-23; the paper and write-up below date from
+> October 2026 and describe them as new as of then.
+
+**Headline results (October 2026)**
 
 | | value | prior | verified by |
 |---|---|---|---|
